@@ -10,6 +10,8 @@ import { tenantCommands } from './commands/tenant';
 import { mappingCommands } from './commands/mapping';
 import { syncCommands } from './commands/sync';
 import { statusCommands } from './commands/status';
+import { licenseCommands } from './commands/license';
+import { enrollCommands } from './commands/enroll';
 
 const program = new Command();
 
@@ -23,6 +25,8 @@ program.addCommand(tenantCommands);
 program.addCommand(mappingCommands);
 program.addCommand(syncCommands);
 program.addCommand(statusCommands);
+program.addCommand(licenseCommands);
+program.addCommand(enrollCommands);
 
 // Global error handling
 program.exitOverride((err) => {
