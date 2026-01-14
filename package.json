@@ -1,0 +1,51 @@
+{
+  "name": "unocloud",
+  "version": "1.0.0",
+  "description": "On-premise to SharePoint file migration tool for Azure tenants",
+  "main": "dist/index.js",
+  "bin": {
+    "unocloud": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli/index.ts",
+    "start": "node dist/cli/index.js",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "sharepoint",
+    "azure",
+    "migration",
+    "file-sync",
+    "microsoft-graph"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/msal-node": "^2.16.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "better-sqlite3": "^11.7.0",
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "conf": "^13.0.1",
+    "cron": "^3.2.1",
+    "dotenv": "^16.4.7",
+    "isomorphic-fetch": "^3.0.0",
+    "minimatch": "^10.0.1",
+    "ora": "^5.4.1",
+    "table": "^6.9.0",
+    "uuid": "^11.0.3",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.0",
+    "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
